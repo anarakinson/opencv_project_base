@@ -11,9 +11,9 @@ find_package(OpenCV CONFIG REQUIRED)
 set( OpenCV_DIR )
 
 if( NOT CMAKE_CL_64 )
-    set( OpenCV_DIR "./vcpkg/installed/x86-windows/share/opencv" )
+    set( OpenCV_DIR "./vcpkg/installed/x86-windows/share/opencv4" )
 else()
-    set( OpenCV_DIR "./vcpkg/installed/x64-windows/share/opencv" )
+    set( OpenCV_DIR "./vcpkg/installed/x64-windows/share/opencv4" )
 endif()
 
 

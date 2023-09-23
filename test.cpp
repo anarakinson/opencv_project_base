@@ -8,7 +8,9 @@ using namespace cv;
 
 
 int main() {
-    std::string image_path = samples::findFile("starry_night.jpg");
+
+    // std::string image_path = samples::findFile("starry_night.jpg");
+    std::string image_path{"starry_night.jpg"};
     Mat img = imread(image_path, IMREAD_COLOR);
 
     if (img.empty()) {
@@ -24,4 +26,5 @@ int main() {
         imwrite("starry_night.png", img);
     }
     return 0;
+
 }
