@@ -1,0 +1,4 @@
+# OpenCV project base
+
+---
+
