@@ -4,17 +4,20 @@ project(test)
 
 add_executable(hello_world 
 
-    # test.cpp
+    # src/test.cpp
     
-    # examples/shapesearch.cpp
-    # examples/straighten.cpp
+    # src/examples/shapesearch.cpp
+    # src/examples/straighten.cpp
 
-    # exercises/image_processing.cpp
-    # exercises/image_resize.cpp
-    # exercises/video_capture.cpp 
-    # exercises/shapes_n_text.cpp 
-    # exercises/warp_perspective.cpp
-    exercises/color_detection.cpp
+    # src/basics/image_processing.cpp
+    # src/basics/image_resize.cpp
+    # src/basics/shapes_n_text.cpp 
+    # src/basics/warp_perspective.cpp
+    # src/basics/video_capture.cpp 
+    # src/simple_projects/color_detection.cpp
+    # src/simple_projects/shape_detection.cpp
+    # src/simple_projects/face_detection.cpp
+    src/simple_projects/camera_face_detection.cpp
 
 )
 
