@@ -3,7 +3,9 @@ cmake_minimum_required(VERSION 3.5)
 project(test)
 
 add_executable(hello_world 
-    test.cpp
+    src/test.cpp
+    # src/shapesearch.cpp
+    # src/straighten.cpp
 )
 
 find_package(OpenCV CONFIG REQUIRED)
