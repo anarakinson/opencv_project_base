@@ -3,9 +3,19 @@ cmake_minimum_required(VERSION 3.5)
 project(test)
 
 add_executable(hello_world 
-    src/test.cpp
-    # src/shapesearch.cpp
-    # src/straighten.cpp
+
+    # test.cpp
+    
+    # examples/shapesearch.cpp
+    # examples/straighten.cpp
+
+    # exercises/image_processing.cpp
+    # exercises/image_resize.cpp
+    # exercises/video_capture.cpp 
+    # exercises/shapes_n_text.cpp 
+    # exercises/warp_perspective.cpp
+    exercises/color_detection.cpp
+
 )
 
 find_package(OpenCV CONFIG REQUIRED)
