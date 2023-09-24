@@ -19,9 +19,11 @@ int main() {
 
     // create UI
     int hmin{}, smin{}, vmin{};
-    int hmax{}, smax{}, vmax{};
+    int hmax{255}, smax{255}, vmax{255};
     // add UI window
     cv::namedWindow("Track bars", cv::WINDOW_NORMAL);
+    // resize window
+    cv::resizeWindow("Track bars", 460, 80);
     // add bars
     cv::createTrackbar("Hue min", "Track bars", &hmin, 179);
     cv::createTrackbar("Hue max", "Track bars", &hmax, 179);
@@ -29,8 +31,6 @@ int main() {
     cv::createTrackbar("Sat max", "Track bars", &smax, 255);
     cv::createTrackbar("Val min", "Track bars", &vmin, 255);
     cv::createTrackbar("Val max", "Track bars", &vmax, 255);
-    // resize window
-    cv::resizeWindow("Track bars", 500, 160);
 
     while (true) {
     
