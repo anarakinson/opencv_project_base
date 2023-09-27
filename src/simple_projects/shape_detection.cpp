@@ -85,6 +85,11 @@ int main() {
 
     // load image as matrix
     cv::Mat img = cv::imread(path);
+    
+    if (img.empty()) {
+        std::cout << "Could not read the image: " << path << std::endl;
+        return 1;
+    }
 
     // preprocess
     cv::Mat edges = get_edges(img);

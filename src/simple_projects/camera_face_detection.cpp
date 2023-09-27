@@ -45,7 +45,6 @@ int main() {
         if (k == 'q') {
             break;
         }
-        std::cout << detected.size() << std::endl;
 
     }
 

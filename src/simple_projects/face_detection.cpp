@@ -13,7 +13,12 @@ int main() {
     std::string path{"assets/neo.jpg"};
 
     // load image as matrix
-    cv::Mat img = cv::imread(path);
+    cv::Mat img = cv::imread(path); 
+
+    if (img.empty()) {
+        std::cout << "Could not read the image: " << path << std::endl;
+        return 1;
+    }
 
     // create classifier
     cv::CascadeClassifier face_detector;

@@ -13,8 +13,13 @@ int main() {
 
     // load image as matrix
     cv::Mat img = cv::imread(path);
-    cv::Mat img_hsv, mask;
-    
+    cv::Mat img_hsv, mask;    
+
+    if (img.empty()) {
+        std::cout << "Could not read the image: " << path << std::endl;
+        return 1;
+    }
+
     cv::cvtColor(img, img_hsv, cv::COLOR_BGR2HSV);
 
     // create UI

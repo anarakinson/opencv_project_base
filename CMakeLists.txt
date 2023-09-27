@@ -14,6 +14,7 @@ add_executable(hello_world
     # src/basics/shapes_n_text.cpp 
     # src/basics/warp_perspective.cpp
     # src/basics/video_capture.cpp 
+    
     # src/simple_projects/color_detection.cpp
     # src/simple_projects/shape_detection.cpp
     # src/simple_projects/face_detection.cpp
@@ -45,6 +46,8 @@ if( OpenCV_FOUND )
     # target_link_libraries(hello_world PRIVATE opencv_ml opencv_dnn opencv_core opencv_flann)
 endif()
 
+# copy assets to build folder
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/Debug)
 
 set_target_properties(
     hello_world PROPERTIES
