@@ -48,6 +48,7 @@ endif()
 
 # copy assets to build folder
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/Debug)
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/OpenCV_cascades DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/Debug)
 
 set_target_properties(
     hello_world PROPERTIES
@@ -55,3 +56,15 @@ set_target_properties(
     CXX_STANDARD_REQUIRED ON
 )
 
+
+if (MSVC)
+    target_compile_options(
+        hello_world PRIVATE
+        /W4
+    )
+else ()
+    target_compile_options(
+        hello_world PRIVATE
+        -Wall -Wextra -pedantic -Werror
+    )
+endif()
